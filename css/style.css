@@ -1,100 +1,37 @@
-body,html {
-    margin: 0;
-    padding: 0;
+label input {
+    display: none;
 }
 
-.container {
-    max-width: 1040px;
-    width: 96%;
-    margin: 0 auto;
-}
-
-.hero {
-    height: 100vh;
-    background-image: url(../images/background.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    padding-top: 19px;
+label input+span {
     position: relative;
+    display: block;
+    padding-left: 20px;
+    box-sizing: border-box;
 }
 
-.header__row {
-    padding-top: 19px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.menu {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    padding: 0 45px 0 83px;
-}
-.menu__item + .menu__item {
-    margin-left: 21px;
-}
-
-.menu__item:last-child {
-    margin-left: auto;
-}
-
-.menu__item a {
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 24px;
-    text-align: center;
-    letter-spacing: 0.2px;
-    color: #FFFFFF;
-    transition: 0.3s;
-    text-decoration: none;
-    
-}
-
-.menu__item a:hover {
-    color: #23A6F0;
-}
-
-.header__button {
-    background-color: #23A6F0;
-    border: 1px solid #fff;
-    color:#fff;
-    padding: 15px 25px;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;
-    cursor: pointer;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 22px;
-    letter-spacing: 0.2px;
-}
-
-.header__button svg {
-    margin-left: 15px;
-}
-
-.header__button:hover {
-    background-color: #fff;
-    color: #23A6F0;
-}
-
-.header {
+label input+span:before {
+    content: '';
     position: absolute;
     left: 0;
-    width: 100%;
+    top: 0;
+    height: 10px;
+    width: 10px;
+    border: 1px solid rosybrown;
+    top: 50%;
+    /* margin-top: -5px; */
+    transform: translatey(-50%);
+
+}
+label input:checked+span:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #411111;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    left: 3px;
+
 }
 
-.hero__content {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    padding: 90px 0;
-    box-sizing: border-box;
-    color: #fff;
-    text-align: center;
-}
